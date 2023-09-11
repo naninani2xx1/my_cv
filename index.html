@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCv</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLKye_aSGZw-UZe8-deWk6hW5BGOqudnayNg&usqp=CAU" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav id="navbar">
+                <h1>MyCv Developer</h1>
+                <ul class="navbar__items">
+                    <li class="navbar__item"><a href="#">Trang chủ</a></li>
+                    <li class="navbar__item"><a href="#about-me">Giới thiệu</a></li>
+                    <li class="navbar__item"><a href="#skills">Kĩ năng</a></li>
+                    <li class="navbar__item"><a href="#experience">Kinh nghiệm</a></li>
+                    <div class="navbar__logo">
+                        <img src="./assets/img/logo.jpg" alt="logo cnnt">
+                    </div>
+                </ul>
+                <div class="navbar__menu"">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+        <div class="navbar__menu-bg" style="display: none;">
+            <div class="navbar__menu-list">
+                <div class="navbar__logo">
+                    <img src="./assets/img/logo.jpg" alt="logo cnnt">
+                </div>
+                <ul class="navbar__items-mobile">
+                    <li class="navbar__item"><a href="#">Trang chủ</a></li>
+                    <li class="navbar__item"><a href="#about-me">Giới thiệu</a></li>
+                    <li class="navbar__item"><a href="#skills">Kĩ năng</a></li>
+                    <li class="navbar__item"><a href="#experience">Kinh nghiệm</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+        <!-- Banner -->
+    <section id="banner">
+            <div class="banner__img">
+                <img src="./assets/img/backgroud_cv.jpg" alt="">
+            </div>
+    </section>
+
+    <div class="container">
+        <!-- About me -->
+        <section id="about-me">
+            <h1 class="about-me__heading">Giới thiệu bản thân</h1>
+            <div class="about-me__items">
+                <div class="about-me__item">
+                    <div class="about-me__item-information">
+                        <div class="about-me__item-leading user-icon circle"></div>
+                        <p class="about-me__item-title">Nguyễn Hoài Chương<br>2001</p>
+                    </div>
+
+                    <div class="about-me__item-information">
+                        <div class="about-me__item-leading email-icon circle"></div>
+                        <p class="about-me__item-title">nhchuong2001@gmail.com</p>
+                    </div>
+
+                    <div class="about-me__item-information">
+                        <div class="about-me__item-leading phone-icon circle"></div>
+                        <p class="about-me__item-title">+84 918031587</p>
+                    </div>
+
+                    <div class="about-me__item-information">
+                        <div class="about-me__item-leading location-icon circle"></div>
+                        <p class="about-me__item-title">12 Hồ Thành Biên, P.4, Quận 8, TP HCM</p>
+                    </div>
+                </div>
+                <div class="about-me__item">
+                    <div class="about-me__item-target">
+                       <div class="item-target__title">
+                            <h4>Mục tiêu</h4>
+                       </div>
+                       <p class="item-target__desc">
+                        - Tôi mong muốn được tham gia vào những dự án thú vị và đầy thách thức, cùng với các đồng đội đam mê và giàu kinh nghiệm. Tôi tin rằng thông qua sự hợp tác và tận tâm của mình, tôi có thể mang giá trị đến cho các khách hàng của công ty.
+                       </p>
+                       <p class="item-target__desc">
+                        - Với tinh thần học hỏi liên tục và cam kết mạnh mẽ đối với công việc của mình, tôi hy vọng có thể phát triển sự nghiệp của mình trong công ty và đóng góp vào sự phát triển bền vững của nó trong tương lai.
+                       </p>
+                    </div>
+
+                    <div class="about-me__item-education">
+                        <div class="item-education__title">
+                             <h4>Học vấn</h4>
+                        </div>
+                        <p class="item-education__desc">
+                            - Trường Cao Đẳng Kĩ Thuật Cao Thắng
+                        </p>
+                        <p class="item-education__desc">
+                         - Bằng Cử Nhân Công Nghệ Thông Tin (2019 - 2023)
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h1 class="skills__heading">Kĩ năng</h1>
+            <div class="skills__list">
+
+                <div class="skills__list-card"> 
+                    <div class="skills__list-card-logo">
+                        <img src="./assets/img/flutter_logo.png" alt="" srcset="">
+                        <h3>Flutter Developer</h3>
+                    </div>
+                    <p class="skills__list-card__desc">+ Ngôn ngữ: Dart, Kotlin(Android)</p>
+                    <br>
+                    <p class="skills__list-card__desc">+ State management: Bloc, GetX, Provider</p>
+                    <br>
+                    <p class="skills__list-card__desc">
+                        + Nắm vững kiến thức về  OOP dart (overide, overload), 
+                        đa luồng Isolate vòng đời của ứng dụng (stateless, 
+                        stateful), tích hợp Firebase, real-time thông báo.</p> <br>
+                    <p class="skills__list-card__desc">+ Mô hình: MVC , Bloc Pattern</p>
+                    <br>
+                    <p class="skills__list-card__desc">
+                        + Công cụ: Postman, Github, Visual Studio Code, Android 
+                        Studio, PS, Notion, Trello</p>
+                     <br>
+                    <p class="skills__list-card__desc">+ Database: MySql</p>
+                    <br>
+                    <p class="skills__list-card__desc">+ Xử lý dữ liệu từ máy chủ làm việc với Json</p>
+                </div>
+
+                <div class="skills__list-card">
+                    <div class="skills__list-card-logo">
+                        <img src="./assets/img/laravel.png" alt="" srcset="">
+                        <h3>Laravel Developer</h3>
+                    </div>
+                    <p class="skills__list-card__desc">+ Ngôn ngữ: PHP, JavaScript, Ajax</p>
+                    <img class="emoji" src="./assets/img/emoji.png" alt="" srcset="">
+                    <h3>Đang trong quá trình phát triển</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h1 class="experience__heading">Dự án cá nhân</h1>
+            <div class="experience__list">
+                <div class="experience__item">
+                    <h2 class="experience__item-title">
+                        Dự án môn học- 2023<br>
+                        xây dựng ứng dụng thời trang (mobile app)
+                    </h2>
+                    <ul id="experience__item-desc">
+                        <li>Công nghệ sử dụng: Firebase, Pusher, Flutter, Laravel</li>
+                        <li>Xây dựng cơ sở dữ liệu, thiết kế giao diện cho ứng dụng</li>
+                        <li>Dựng base dự án Flutter.</li>
+                        <li>State management: Bloc</li>
+                        <li>Xử lý mọi case trên Flutter</li>
+                    </ul>
+                    <div class="experience__item-github">
+                        <a href="https://github.com/naninani2xx1/luan_an_fashionstore.git">
+                            <img src="./assets/img/github-logo.webp" alt="GitHub">
+                         </a>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <h2 class="experience__item-title">
+                        Dự án môn học- 2023<br>
+                        xây dựng ứng dụng mạng xã hội (mobile app)
+                    </h2>
+                    <ul id="experience__item-desc">
+                        <li>Công nghệ sử dụng: Firebase, Pusher, Flutter, Laravel</li>
+                        <li>Xây dựng cơ sở dữ liệu, thiết kế giao diện cho ứng dụng</li>
+                        <li>Dựng base dự án Flutter.</li>
+                        <li>State management: Bloc</li>
+                        <li>Xử lý mọi case trên Flutter</li>
+                    </ul>
+                    <div class="experience__item-github">
+                        <a href="https://github.com/naninani2xx1/post_social_media.git">
+                            <img src="./assets/img/github-logo.webp" alt="GitHub">
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- kit awesome -->
+    <script src="https://kit.fontawesome.com/a3f561c281.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js" defer></script>
+</body>
+</html>

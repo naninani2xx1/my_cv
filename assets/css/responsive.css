@@ -1,0 +1,154 @@
+
+/* Tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .skills__list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .skills__list-card {
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Phone */
+@media screen and (max-width: 766px) {
+    
+    header {
+        height: 55px;
+        margin-top: 0px;
+    }
+
+    .navbar__logo {
+        width: 50%;
+        height: calc(50vw/2);
+    }
+
+    .navbar__menu-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: display 3s ease-out;
+    }
+
+    .navbar__menu-list {
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 50vw;
+        background-color: var(--primary);
+        transition: slide 1s ease-out;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .navbar__items-mobile {
+        list-style-type: none;
+        margin-top: 24px;
+        width: 80%;
+    }
+
+    #navbar {
+        height: 55px;
+    }
+
+    #navbar > h1 {
+        font-size: 1.1rem;
+    }
+
+    .navbar__items {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: block;
+        color: var(--white);
+    }
+
+    /* About me */
+
+    #about-me {
+        margin-top: 32px;
+    }
+
+    .about-me__items {
+        flex-direction: column;
+    }
+
+    .about-me__items::after { 
+        position: unset;
+        content: "";
+    }
+
+    .about-me__item {
+        width: 100%;
+        gap: 15px;
+        margin-top: 16px;
+    }
+
+    .about-me__item-leading {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* skills */
+    #skills {
+        margin: 0 30px;
+    }
+
+    .skills__list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .skills__list-card {
+        width: 100%;
+    }
+
+    /* experience */
+
+    #experience {
+        margin: 58px 40px 80px 40px;
+    }
+
+    .experience__list {
+        flex-direction: column;
+    }
+
+    .experience__list::after {
+        position: unset;
+    }
+    
+    .experience__item {
+        position: unset; 
+        width: 100%;
+    }
+
+    .experience__item-github {
+        height: 80px;
+    }
+
+    #experience__item-desc {
+       text-align: justify;
+    }
+}

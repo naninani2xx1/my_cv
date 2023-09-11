@@ -1,0 +1,371 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --green: #54b192;
+    --green-l: #a4cec0;
+    --gray: #3f3d56;
+    --black: #000000;
+    --white: #ffffff;
+    --primary: #49555A;
+    --smooth: all 0.25s ease-in;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    height: 65px;
+    margin-top: 16px;
+    opacity: 1.0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+#navbar > h1 {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.navbar__menu {
+    display: none;
+}
+
+.navbar__items {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar__item {
+    position: relative;
+    padding: 10px 16px;
+}
+
+.navbar__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff1493, #00bfff);
+    transition: width 0.5s ease-in-out;
+}
+
+.navbar__item:hover::after {
+    width: 100%; /* Khi hover, đường line sẽ nở ra từ trái sang phải */
+    cursor: pointer;
+}
+
+.navbar__item > a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.navbar__logo {
+    margin-left: 12px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hiệu ứng xoay vòng */
+.navbar__logo::before,
+.navbar__logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top-color: #ff1493; /* Màu đường viền trên */
+  border-bottom-color: #00bfff; /* Màu đường viền dưới */
+  border-radius: 50%; /* Để tạo hình tròn cho đường viền */
+  animation: rotate 2s linear infinite; /* Thời gian và loại animation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Góc xoay ban đầu */
+  }
+  100% {
+    transform: rotate(360deg); /* Góc xoay sau khi hoàn thành 1 vòng */
+  }
+}
+
+.navbar__logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tuỳ chọn, để đảm bảo hình ảnh lấp đầy phần tử div */
+}
+
+/* Banner */
+.banner__img {
+    position: relative;
+}
+
+.banner__img > img {
+    display: block;
+    object-fit: cover;
+}
+
+.banner__img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background-color: var(--black);
+}
+/* About me */
+#about-me {
+    margin: 58px 0;
+}
+
+#about-me .about-me__heading {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.about-me__items{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me__items::after {
+    position: absolute;
+    content: "";
+    background-color: red;
+    width: 0.1px;
+    height: 90%;
+    top: 6%;
+    left: 50%;
+    opacity: 0.5;
+    transform: translateX(-50%);
+}
+
+.about-me__item {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+
+.about-me__item-information {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-me__item-title {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.user-icon {
+    background: url(../img/user-solid.svg) center/50% 50% no-repeat content-box;
+}
+
+.email-icon {
+    background: url(../img/email.svg) center/50% 50% no-repeat content-box;
+}
+
+.phone-icon {
+    background: url(../img/phone.svg) center/50% 50% no-repeat content-box;
+}
+
+.location-icon {
+    background: url(../img/location-dot.svg) center/50% 50% no-repeat content-box;
+}
+
+.about-me__item-leading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+}
+
+.item-education__title,
+.item-target__title {
+    width: 45%;
+    background-color: var(--primary);
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.item-education__title > h4,
+.item-target__title > h4{
+    line-height: 40px;
+    color: var(--white);
+    font-weight: 400;
+}
+.item-education__desc,
+.item-target__desc {
+    line-height: 1.3;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+/* Skills */
+#skills {
+    margin: 0 100px;
+}
+
+.skills__heading {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.skills__list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills__list-card {
+    position: relative;
+    padding: 130px 20px 20px 20px;
+    width: 45%;
+    margin-top: 7rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 2px 8px;
+}
+
+.skills__list-card-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.skills__list-card .skills__list-card-logo > h3 {
+    font-size: 1em;
+}
+
+.skills__list-card .emoji {
+    position: relative;
+    left: 50%;
+    margin: 24px 0;
+    transform: translateX(-50%);
+    width: 35%;
+   
+}
+
+.skills__list-card__desc {
+    font-size: 0.9rem;
+}
+
+/* Experience */
+#experience {
+    margin: 58px 80px 130px 80px;
+}
+
+.experience__list {
+    margin-top: 24px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.experience__list::after {
+    position: absolute;
+    content: "";
+    background-color: red;
+    width: 0.1px;
+    height: 100%;
+    top: 0%;
+    left:50%;
+    opacity: 0.5;
+    transform: translateX(-50%);
+}
+
+.experience__item {
+    position: relative;
+    width: 40%;
+}
+
+.experience__heading {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.experience__item-title {
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+#experience__item-desc {
+    margin-left: 24px;
+    font-size: 0.9em;
+}
+
+#experience__item-desc > li {
+    margin-bottom: 14px;
+}
+
+.experience__item-github {
+    position: relative;
+}
+
+.experience__item-github > a > img {
+    display: block;
+    width: 60%;
+    height: auto;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
